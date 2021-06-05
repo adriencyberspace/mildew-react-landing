@@ -1,14 +1,14 @@
 import React  from 'react'
 
 import Navigation from './components/Navigation'
-import MildewTitle from './components/Title'
+import { Main } from './components/Main'
 
 
 function App() {
   return (
     <div>
       <Navigation />
-      <MildewTitle />
+      <Main />
     </div>
   )
 }
