@@ -45,12 +45,12 @@ const NavLink = styled(Link)`
   ${props =>
     props.bottomLeft &&
     css`
-      border: 1px solid #C85D4A;
+      border: 1px solid #6EB0CC;
       bottom: 0;
       left: 0;
       &:hover {
         transform: rotate(15deg);
-        background: #C85D4A;
+        background: #6EB0CC;
       }
     `};
 
@@ -75,9 +75,9 @@ const Navigation = () => {
     <Container>
       <BrowserRouter>
         <NavLink topLeft to="/">Home</NavLink>
-        <NavLink topRight target="_blank" href="https://www.instagram.com/mildewmag/">Instagram</NavLink>
+        <NavLink topRight to="/about">About</NavLink>
         <NavLink bottomLeft to="/contact">Contact</NavLink>
-        <NavLink bottomRight to="/about">About</NavLink>
+        <NavLink bottomRight target="_blank" to={{ pathname: "https://www.instagram.com/mildewmag/"}}>Instagram</NavLink>
 
         <Switch>
           <Route exact path='/' component={Home}></Route>
