@@ -1,7 +1,36 @@
 body {
-  font-family: "Work Sans", Helvetica, sans-serif;
+  font-family: "Goudy", "Work Sans", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.2;
+}
+
+@font-face {
+  font-family: "TwCen";
+  src: local("TwCen"), url('./fonts/Tw-Cen-MT.ttf') format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Goudy";
+  src: local("Goudy"), url('./fonts/GoudyBookletter1911.ttf') format("truetype");
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "TwCen", "Work Sans", Helvetica, sans-serif;
+}
+
+p {
+  letter-spacing: .7px;
+}
+
+.input-class::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.input-class:focus {
+  outline: none;
 }
 
 code {

@@ -1,38 +1,59 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Blurb } from './Content'
 
-const Title = styled.h1`
-    font-size: 100px;
-    margin: 60px auto 20px;
-    width: fit-content;
-    font-weight: 400;
-`
-
-const Blurb = styled.h4`
-    margin: 0px auto;
-    width: fit-content;
-    font-size: 24px;
-    margin-bottom: 20px;
-`
-
-const P = styled.p`
-    margin: 0px auto;
-    width: fit-content;
-    max-width: 60%;
+const Container = styled.div`
+  width: fit-content;
+  margin: auto;
 `
 
 const Subscribe = () => {
+  const hidden = {
+    display: 'none'
+  }
+
+  const noBackground = {
+    background: 'none',
+    marginBottom: 10,
+    padding: 10,
+    border: '1px solid black',
+    borderRight: 'none'
+  }
+
+  const submitButton = {
+    background: '#E5AC43',
+    border: '1px solid black',
+    fontFamily: 'TwCen',
+    paddingTop: 10,
+    paddingRight: 15,
+    paddingBottom: 10,
+    paddingLeft: 15,
+  }
+
+  const inputContainer = {
+    width: 'fit-content',
+    margin: 'auto'
+  }
 
     return (
-        <div className="content-container">
-            <div>
-                <Title>Subscribe</Title>
-                <Blurb>Subscribe away.</Blurb>
-                <P>
-                    I love things that age well - things that don't date, that stand the test of time and that become living examples of the absolute best. The great thing about fashion is that it always looks forward. Never in my wildest dreams did I entertain the idea that I would become a fashion designer. In a meat-eating world, wearing leather for shoes and clothes and even handbags, the discussion of fur is childish. Doing collections, doing fashion is like a non-stop dialogue.
-                </P>
+      <Container>
+      <div class="horizontal-mailchimp">
+        <Blurb>Subscribe to Newsletter:</Blurb>
+        <div>
+          <form action="https://werejustbloggers.us12.list-manage.com/subscribe/post?u=b38348e963ae415366792ad09&id=71e8555b1d" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <div id="mc_embed_signup_scroll">
+              <div style={inputContainer}>
+                <input style={noBackground} class="input-class" type="email" value="" name="EMAIL" placeholder="Email address"></input>
+                <input style={submitButton} type="submit" value="Subscribe" name="subscribe"></input>
+              </div>
+              <div style={hidden}>
+                <input type="text" name="b_b38348e963ae415366792ad09_71e8555b1d" tabindex="-1" value=""></input>
+              </div>
             </div>
+          </form>
         </div>
+      </div>
+      </Container>
 
     )
 
