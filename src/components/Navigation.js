@@ -14,8 +14,8 @@ const NavLink = styled(Link)`
   padding: 20px;
   position: fixed;
   text-decoration: none;
-  &:hover {
-
+  @media only screen and (max-width: 500px) {
+    display: none;
   }
 
   ${props =>
