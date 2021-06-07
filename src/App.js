@@ -6,7 +6,7 @@ import logo from './images/mildew.png'
 
 const Image = styled.img`
   width: 40%;
-  margin: 100px 30% 60px;
+  margin: 150px 30% 10px;
 `;
 
 function Header() {

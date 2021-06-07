@@ -3,15 +3,24 @@ import { Subscribe } from './Subscribe'
 import { Blurb, P } from './Content'
 
 const Home = () => {
+    const marginTop20 = {
+        marginTop: 20
+    }
+
+    const marginBottom20 = {
+        marginBottom: 20
+    }
+
     return (
         <div className="content-container">
             <div>
-                <Blurb>Not new, but original.</Blurb>
-                <P>
-                    I love things that age well - things that don't date, that stand the test of time and that become living examples of the absolute best. The great thing about fashion is that it always looks forward. Never in my wildest dreams did I entertain the idea that I would become a fashion designer. In a meat-eating world, wearing leather for shoes and clothes and even handbags, the discussion of fur is childish. Doing collections, doing fashion is like a non-stop dialogue.
-                </P>
+                <Blurb> The secondhand fashion magazine.</Blurb>
+                <P style={marginBottom20}> In print Spring 2022. </P>   
             </div>
+            <P style={marginBottom20}> Stay in the loop:</P>
             <Subscribe />
+            <P style={marginTop20}>@mildewmag</P>
+            <P style={marginTop20}>mildewmag@gmail.com</P>
         </div>
     )
 }

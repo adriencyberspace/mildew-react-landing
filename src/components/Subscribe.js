@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Blurb } from './Content'
 
 const Container = styled.div`
   width: fit-content;
@@ -14,7 +13,6 @@ const Subscribe = () => {
 
   const noBackground = {
     background: 'none',
-    marginBottom: 10,
     padding: 10,
     border: '1px solid black',
     borderRight: 'none'
@@ -38,7 +36,6 @@ const Subscribe = () => {
     return (
       <Container>
       <div class="horizontal-mailchimp">
-        <Blurb>Subscribe to Newsletter:</Blurb>
         <div>
           <form action="https://werejustbloggers.us12.list-manage.com/subscribe/post?u=b38348e963ae415366792ad09&id=71e8555b1d" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
             <div id="mc_embed_signup_scroll">

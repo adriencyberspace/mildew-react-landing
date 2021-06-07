@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Link, Switch, Route, Redirect } from 'react-router-dom'
 
 import { About } from './About'
 import { Contact } from './Contact'
@@ -83,6 +83,9 @@ const Navigation = () => {
           <Route exact path='/' component={Home}></Route>
           <Route exact path='/about' component={About}></Route>
           <Route exact path='/contact' component={Contact}></Route>
+          <Route path="*">
+            <Redirect to="/" />
+          </Route>
         </Switch>
       </BrowserRouter>
     </Container>
