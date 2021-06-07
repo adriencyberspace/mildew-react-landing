@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mildew-react-landing/static/css/main.e5e83897.chunk.css",
-    "main.js": "/mildew-react-landing/static/js/main.acdaf1ac.chunk.js",
-    "main.js.map": "/mildew-react-landing/static/js/main.acdaf1ac.chunk.js.map",
+    "main.js": "/mildew-react-landing/static/js/main.191a8981.chunk.js",
+    "main.js.map": "/mildew-react-landing/static/js/main.191a8981.chunk.js.map",
     "runtime-main.js": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js",
     "runtime-main.js.map": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js.map",
     "static/css/2.679831fc.chunk.css": "/mildew-react-landing/static/css/2.679831fc.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.82e6be0c.chunk.js",
     "static/css/main.e5e83897.chunk.css",
-    "static/js/main.acdaf1ac.chunk.js"
+    "static/js/main.191a8981.chunk.js"
   ]
 }
