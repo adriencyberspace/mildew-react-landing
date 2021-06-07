@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mildew-react-landing/static/css/main.e5e83897.chunk.css",
-    "main.js": "/mildew-react-landing/static/js/main.664ef70f.chunk.js",
-    "main.js.map": "/mildew-react-landing/static/js/main.664ef70f.chunk.js.map",
+    "main.css": "/mildew-react-landing/static/css/main.104cb76d.chunk.css",
+    "main.js": "/mildew-react-landing/static/js/main.aac12ffd.chunk.js",
+    "main.js.map": "/mildew-react-landing/static/js/main.aac12ffd.chunk.js.map",
     "runtime-main.js": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js",
     "runtime-main.js.map": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js.map",
     "static/css/2.679831fc.chunk.css": "/mildew-react-landing/static/css/2.679831fc.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.7f4fe0d7.chunk.js.map": "/mildew-react-landing/static/js/3.7f4fe0d7.chunk.js.map",
     "index.html": "/mildew-react-landing/index.html",
     "static/css/2.679831fc.chunk.css.map": "/mildew-react-landing/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.e5e83897.chunk.css.map": "/mildew-react-landing/static/css/main.e5e83897.chunk.css.map",
+    "static/css/main.104cb76d.chunk.css.map": "/mildew-react-landing/static/css/main.104cb76d.chunk.css.map",
     "static/js/2.82e6be0c.chunk.js.LICENSE.txt": "/mildew-react-landing/static/js/2.82e6be0c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/mildew-react-landing/static/media/Tw-Cen-MT.7b67eec0.ttf",
     "static/media/mildew.a49efbbf.png": "/mildew-react-landing/static/media/mildew.a49efbbf.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.9e5ec9a5.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.82e6be0c.chunk.js",
-    "static/css/main.e5e83897.chunk.css",
-    "static/js/main.664ef70f.chunk.js"
+    "static/css/main.104cb76d.chunk.css",
+    "static/js/main.aac12ffd.chunk.js"
   ]
 }
