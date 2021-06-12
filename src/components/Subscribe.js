@@ -13,24 +13,23 @@ const Subscribe = () => {
 
   const noBackground = {
     background: 'none',
-    padding: 10,
-    border: '1px solid black',
-    borderRight: 'none'
+    border: 'none',
+    paddingLeft: 10,
   }
 
   const submitButton = {
     background: '#E5AC43',
-    border: '1px solid black',
+    border: 'none',
+    borderLeft: '1px solid black',
+    borderRadius: 0,
     fontFamily: 'TwCen',
-    paddingTop: 10,
-    paddingRight: 15,
-    paddingBottom: 10,
-    paddingLeft: 15,
+    padding: '10px 15px',
   }
 
   const inputContainer = {
+    border: '1px solid black',
+    margin: 'auto',
     width: 'fit-content',
-    margin: 'auto'
   }
 
     return (
@@ -41,7 +40,7 @@ const Subscribe = () => {
             <div id="mc_embed_signup_scroll">
               <div style={inputContainer}>
                 <input style={noBackground} class="input-class" type="email" value="" name="EMAIL" placeholder="Email address"></input>
-                <input style={submitButton} type="submit" value="Subscribe" name="subscribe"></input>
+                <input style={submitButton} id="subscribe-button" type="submit" value="See You Soon" name="subscribe"></input>
               </div>
               <div style={hidden}>
                 <input type="text" name="b_b38348e963ae415366792ad09_71e8555b1d" tabindex="-1" value=""></input>

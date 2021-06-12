@@ -16,7 +16,7 @@ const Logo = styled.img`
   }
 
   @media only screen and (max-width: 420px) {
-    margin: 120px 10% 0;
+    margin: 100px 10% 0;
     width: 80%;
   }
 `;
