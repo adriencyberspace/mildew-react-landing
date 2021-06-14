@@ -7,10 +7,10 @@ const BlurbDiv = styled.div`
 
 const Blurb = styled.h4`
   margin: 20px;
-  font-size: 38px;
+  font-size: 48px;
 
   @media only screen and (max-width: 1100px) {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   @media only screen and (max-width: 680px) {
@@ -26,7 +26,7 @@ const P = styled.p`
   margin: 0px auto;
   width: fit-content;
   max-width: 60%;
-  font-size: 18px;
+  font-size: 22px;
 
   @media only screen and (max-width: 400px) {
     font-size: 16px;
@@ -34,7 +34,7 @@ const P = styled.p`
 `
 
 const A = styled.a`
-  color: black;
+  color: #E0ECC6;
   text-decoration: none;
 
   &:hover {

@@ -8,19 +8,20 @@ const Container = styled.div`
 
 const Subscribe = () => {
   const hidden = {
-    display: 'none'
+    display: 'none',
   }
 
   const noBackground = {
-    background: 'none',
+    background: '#E0ECC6',
     border: 'none',
     paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 10
   }
 
   const submitButton = {
-    background: '#E5AC43',
+    background: '#6EB0CC',
     border: 'none',
-    borderLeft: '1px solid black',
     borderRadius: 0,
     fontFamily: 'TwCen',
     padding: '10px 15px',

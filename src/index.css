@@ -1,7 +1,6 @@
 body {
-  background-color: #EEEEEE;
-  /* background-color: #26312F;
-  color: white; */
+  background-color: #26312F;
+  color: #E0ECC6;
   font-family: "Goudy", "Work Sans", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.2;
@@ -20,6 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #D7B7E1;
   font-family: "TwCen", "Work Sans", Helvetica, sans-serif;
 }
 
@@ -45,62 +45,24 @@ code {
   background-color: black;
 }
 
-
-@media only screen and (min-width: 700px) {
-  .js-form {
-    max-width: 40%;
-  }
-  
-  #button-text-6 {
-    max-width: 40%
-  }
-  
-  .text-3 {
-    max-width: 40%!important;
-  }
-  
-  .text-7 {
-    max-width: 80%!important;
-  }
+#green {
+  color: #666652;
 }
 
-@media only screen and (max-width: 700px){
-  img[src*="Untitled"] {
-    min-width: 30%!important;
-  }
+#pink {
+  color: #E89B9A;
+}
 
-  img[src*="FNK"] {
-    width: 80%!important;
-    min-width: 80%!important;
-   }
+#teal {
+  color: #319686;
+}
+
+#blue {
+  color: #6EB0CC;
 }
 
 
-@media only screen and (min-width: 700px) {
-  .js-form {
-    max-width: 57%;
-  }
-  
-  #button-text-6 {
-    max-width: 57%
-  }
-  
-  .text-3 {
-    max-width: 57%!important;
-  }
-  
-  .text-7 {
-    max-width: 55%!important;
-  }
-}
 
-@media only screen and (max-width: 700px){
-  img[src*="Untitled"] {
-    min-width: 30%!important;
-  }
-
-  img[src*="FNK"] {
-    width: 80%!important;
-    min-width: 80%!important;
-   }
+#green:hover, #pink:hover, #blue:hover, #teal:hover {
+  color: white;
 }
