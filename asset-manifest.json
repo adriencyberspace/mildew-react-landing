@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mildew-react-landing/static/css/main.104cb76d.chunk.css",
-    "main.js": "/mildew-react-landing/static/js/main.76999a32.chunk.js",
-    "main.js.map": "/mildew-react-landing/static/js/main.76999a32.chunk.js.map",
+    "main.css": "/mildew-react-landing/static/css/main.14f31c64.chunk.css",
+    "main.js": "/mildew-react-landing/static/js/main.bca93841.chunk.js",
+    "main.js.map": "/mildew-react-landing/static/js/main.bca93841.chunk.js.map",
     "runtime-main.js": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js",
     "runtime-main.js.map": "/mildew-react-landing/static/js/runtime-main.9e5ec9a5.js.map",
     "static/css/2.679831fc.chunk.css": "/mildew-react-landing/static/css/2.679831fc.chunk.css",
@@ -12,16 +12,24 @@
     "static/js/3.7f4fe0d7.chunk.js.map": "/mildew-react-landing/static/js/3.7f4fe0d7.chunk.js.map",
     "index.html": "/mildew-react-landing/index.html",
     "static/css/2.679831fc.chunk.css.map": "/mildew-react-landing/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.104cb76d.chunk.css.map": "/mildew-react-landing/static/css/main.104cb76d.chunk.css.map",
+    "static/css/main.14f31c64.chunk.css.map": "/mildew-react-landing/static/css/main.14f31c64.chunk.css.map",
     "static/js/2.82e6be0c.chunk.js.LICENSE.txt": "/mildew-react-landing/static/js/2.82e6be0c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/mildew-react-landing/static/media/Tw-Cen-MT.7b67eec0.ttf",
-    "static/media/mildew.a49efbbf.png": "/mildew-react-landing/static/media/mildew.a49efbbf.png"
+    "static/media/mildew.a49efbbf.png": "/mildew-react-landing/static/media/mildew.a49efbbf.png",
+    "static/media/nav1color.27c1cf22.png": "/mildew-react-landing/static/media/nav1color.27c1cf22.png",
+    "static/media/nav1white.132b6e6e.png": "/mildew-react-landing/static/media/nav1white.132b6e6e.png",
+    "static/media/nav2color.d32da9fc.png": "/mildew-react-landing/static/media/nav2color.d32da9fc.png",
+    "static/media/nav2white.9e5f972e.png": "/mildew-react-landing/static/media/nav2white.9e5f972e.png",
+    "static/media/nav3color.cf902e0a.png": "/mildew-react-landing/static/media/nav3color.cf902e0a.png",
+    "static/media/nav3white.dab078d0.png": "/mildew-react-landing/static/media/nav3white.dab078d0.png",
+    "static/media/nav4color.1f47f446.png": "/mildew-react-landing/static/media/nav4color.1f47f446.png",
+    "static/media/nav4white.09d0259e.png": "/mildew-react-landing/static/media/nav4white.09d0259e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9e5ec9a5.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.82e6be0c.chunk.js",
-    "static/css/main.104cb76d.chunk.css",
-    "static/js/main.76999a32.chunk.js"
+    "static/css/main.14f31c64.chunk.css",
+    "static/js/main.bca93841.chunk.js"
   ]
 }
