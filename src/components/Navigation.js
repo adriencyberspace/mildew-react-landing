@@ -104,6 +104,18 @@ const NavLink = styled(Link)`
   }
 `
 
+const Hidden = styled.div`
+  position: absolute;
+  top: 0;
+  right: -50;
+  max-width: 1px;
+
+`
+
+const HiddenImg = styled.img`
+  max-width: 100%;
+`
+
 const Container = styled.div`
 `
 
@@ -129,6 +141,12 @@ const Navigation = () => {
           </Route>
         </Switch>
       </BrowserRouter>
+      <Hidden>
+        <HiddenImg src={nav1color}></HiddenImg>
+        <HiddenImg src={nav2color}></HiddenImg>
+        <HiddenImg src={nav3color}></HiddenImg>
+        <HiddenImg src={nav4color}></HiddenImg>
+      </Hidden>
     </Container>
   )
 }
