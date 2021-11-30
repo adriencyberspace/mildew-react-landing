@@ -85,8 +85,17 @@ code {
   color: #D7B7E1;
 }
 
-
 .inputField__field {
   font-family: "Goudy", Times;
   font-size: 18px;
+}
+
+@media only screen and (max-width: 400px){
+  .mc__alert {
+    font-size: 16px;
+  }
+
+  .inputField__field {
+    font-size: 16px;
+  }
 }
