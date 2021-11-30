@@ -31,7 +31,8 @@ const Submit = styled.input`
     justify-content: space-evenly;
     color: black;
     border: none;
-    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     &:hover{
         background: #319686
     }
