@@ -4,6 +4,8 @@ body {
   font-family: "Goudy", "Work Sans", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {

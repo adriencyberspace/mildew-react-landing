@@ -11,6 +11,8 @@ const Input = styled.input`
     flex-direction: column;
     padding-left: 10px;
     justify-content: space-evenly;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
     &:focus-visible{
         outline: none;
     }
