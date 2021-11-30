@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/mildew-react-landing/static/css/main.2a027aa0.chunk.css",
-    "main.js": "/mildew-react-landing/static/js/main.bc7ce8c7.chunk.js",
-    "main.js.map": "/mildew-react-landing/static/js/main.bc7ce8c7.chunk.js.map",
+    "main.css": "/mildew-react-landing/static/css/main.c654eb8f.chunk.css",
+    "main.js": "/mildew-react-landing/static/js/main.39b32014.chunk.js",
+    "main.js.map": "/mildew-react-landing/static/js/main.39b32014.chunk.js.map",
     "runtime-main.js": "/mildew-react-landing/static/js/runtime-main.0bea23a0.js",
     "runtime-main.js.map": "/mildew-react-landing/static/js/runtime-main.0bea23a0.js.map",
     "static/js/2.86ce16c8.chunk.js": "/mildew-react-landing/static/js/2.86ce16c8.chunk.js",
     "static/js/2.86ce16c8.chunk.js.map": "/mildew-react-landing/static/js/2.86ce16c8.chunk.js.map",
     "index.html": "/mildew-react-landing/index.html",
-    "static/css/main.2a027aa0.chunk.css.map": "/mildew-react-landing/static/css/main.2a027aa0.chunk.css.map",
+    "static/css/main.c654eb8f.chunk.css.map": "/mildew-react-landing/static/css/main.c654eb8f.chunk.css.map",
     "static/js/2.86ce16c8.chunk.js.LICENSE.txt": "/mildew-react-landing/static/js/2.86ce16c8.chunk.js.LICENSE.txt",
     "static/media/App.css": "/mildew-react-landing/static/media/Tw-Cen-MT.7b67eec0.ttf",
     "static/media/mildew.a49efbbf.png": "/mildew-react-landing/static/media/mildew.a49efbbf.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.0bea23a0.js",
     "static/js/2.86ce16c8.chunk.js",
-    "static/css/main.2a027aa0.chunk.css",
-    "static/js/main.bc7ce8c7.chunk.js"
+    "static/css/main.c654eb8f.chunk.css",
+    "static/js/main.39b32014.chunk.js"
   ]
 }
