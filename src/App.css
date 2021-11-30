@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+body {
+  background-color: #26312F;
+  color: #E0ECC6;
+  font-family: "Goudy", "Work Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "TwCen";
+  src: local("TwCen"), url('./fonts/Tw-Cen-MT.ttf') format("truetype");
+  font-weight: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Goudy";
+  src: local("Goudy"), url('./fonts/GoudyBookletter1911.ttf') format("truetype");
+  font-weight: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1, h2, h3, h4, h5, h6 {
+  color: #D7B7E1;
+  font-family: "TwCen", "Work Sans", Helvetica, sans-serif;
+}
+
+p {
+  letter-spacing: .7px;
+}
+
+.input-class::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.input-class:focus {
+  outline: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#describe-button:hover {
+  background-color: black;
+}
+
+#green {
+  color: #B0B04C;
+}
+
+#pink {
+  color: #E89B9A;
+}
+
+#teal {
+  color: #319686;
+}
+
+#blue {
+  color: #6EB0CC;
+}
+
+#red {
+  color: #C85D4A;
+}
+
+
+
+#green:hover, #pink:hover, #blue:hover, #teal:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mc__alert {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mc__alert--error {
+  color: #C85D4A;
+}
+
+.mc__alert--sending{
+  color: #D7B7E1;
+}
+
+
+.inputField__field {
+  font-family: "Goudy", Times;
+  font-size: 18px;
 }

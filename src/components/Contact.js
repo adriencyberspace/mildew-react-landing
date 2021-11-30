@@ -1,7 +1,10 @@
 import React from 'react'
-import { Blurb, BlurbDiv, P } from './Content'
+import { Blurb, BlurbDiv, P, A } from './Content'
 
 const Contact = () => {
+    const marginTop20 = {
+        marginTop: 20
+    }
 
     return (
         <div className="content-container">
@@ -9,9 +12,8 @@ const Contact = () => {
                 <BlurbDiv>
                     <Blurb>Contact Mildew!</Blurb>
                 </BlurbDiv>
-                <P>
-                    I love things that age well - things that don't date, that stand the test of time and that become living examples of the absolute best. The great thing Contact fashion is that it always looks forward. Never in my wildest dreams did I entertain the idea that I would become a fashion designer. In a meat-eating world, wearing leather for shoes and clothes and even handbags, the discussion of fur is childish. Doing collections, doing fashion is like a non-stop dialogue.
-                </P>
+                <P style={marginTop20}><A rel="noreferrer" target="_blank" href="https://www.instagram.com/mildewmag">@mildewmag</A></P>
+                <P style={marginTop20}><A rel="noreferrer" target="_blank" href="mailto:mildewmag@gmail.com">mildewmag@gmail.com</A></P>
             </div>
         </div>
 

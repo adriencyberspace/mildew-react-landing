@@ -60,14 +60,14 @@ const Subscribe = () => {
       <Container>
       <div class="horizontal-mailchimp">
         <div>
-          <form action="https://werejustbloggers.us12.list-manage.com/subscribe/post?u=b38348e963ae415366792ad09&id=71e8555b1d" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-            <div id="mc_embed_signup_scroll">
+          <form action='https://mildewmag.us20.list-manage.com/subscribe/post?u=037b6a8670c6cce5814bcd8ba&amp;id=8789398a33' method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+            <div>
               <InputContainer>
                 <SpanInput>
                   <input style={noBackground} type="email" value="" name="EMAIL" placeholder="Email address"></input>
                 </SpanInput>
                 <SpanSubmit>
-                  <input style={submitButton} id="subscribe-button" type="submit" value="See You Soon" name="subscribe"></input>
+                  <input style={submitButton}type="submit" value="See You Soon" name="subscribe"></input>
                 </SpanSubmit>
               </InputContainer>
               <div style={hidden}>

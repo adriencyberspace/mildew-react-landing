@@ -29,7 +29,7 @@ const NavBlob = styled.div`
   &:hover {
     color: white;
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 800px) {
     display: none;
   }
 

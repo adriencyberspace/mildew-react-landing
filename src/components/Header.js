@@ -21,7 +21,7 @@ const Logo = styled.img`
   }
 `;
 
-function Header() {
+const Header = () => {
   return (
     <div>
       <Logo src={logo} />
