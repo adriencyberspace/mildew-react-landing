@@ -14,6 +14,9 @@ const Input = styled.input`
     &:focus-visible{
         outline: none;
     }
+    @media (max-width: 900px){
+        width: 200px;
+    }
 `
 
 const Submit = styled.input`
@@ -28,6 +31,7 @@ const Submit = styled.input`
     justify-content: space-evenly;
     color: black;
     border: none;
+    border-radius: 0;
     &:hover{
         background: #319686
     }
