@@ -28,6 +28,9 @@ const Submit = styled.input`
     justify-content: space-evenly;
     color: black;
     border: none;
+    &:hover{
+        background: #319686
+    }
 `
 
 
