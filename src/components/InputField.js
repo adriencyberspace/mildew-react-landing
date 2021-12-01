@@ -16,6 +16,9 @@ const Input = styled.input`
     &:focus-visible{
         outline: none;
     }
+    &:focus{
+        outline: none;
+    }
     @media (max-width: 900px){
         width: 200px;
     }
