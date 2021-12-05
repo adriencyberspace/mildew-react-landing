@@ -1,14 +1,7 @@
 import React from 'react'
+
 import Mailchimp from './Mailchimp'
-import { A, Blurb, BlurbDiv, P } from './Content'
-import styled from 'styled-components'
-
-const Span = styled.span`
-    @media (min-width: 800px){
-        display: none;
-    }
-`
-
+import { A, Blurb, BlurbDiv, P, Span, MobileLink } from './Content'
 
 const Home = () => {
     const marginTop20 = {
@@ -32,6 +25,7 @@ const Home = () => {
             <Span>
                 <P style={marginTop20}><A rel="noreferrer" target="_blank" href="https://www.instagram.com/mildewmag">@mildewmag</A></P>
                 <P style={marginTop20}><A rel="noreferrer" target="_blank" href="mailto:mildewmag@gmail.com">mildewmag@gmail.com</A></P>
+                <P style={marginTop20}><MobileLink to="/about">About Mildew</MobileLink></P>
             </Span>
         </div>
     )

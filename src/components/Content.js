@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const BlurbDiv = styled.div`
@@ -28,6 +29,11 @@ const P = styled.p`
   max-width: 60%;
   font-size: 22px;
 
+  @media only screen and (max-width: 700px) {
+    max-width: 70%;
+    text-align: center;
+  }
+
   @media only screen and (max-width: 400px) {
     font-size: 16px;
   }
@@ -42,4 +48,19 @@ const A = styled.a`
   }
 `
 
-export {A, Blurb, BlurbDiv, P}
+const Span = styled.span`
+    @media (min-width: 800px){
+        display: none;
+    }
+`
+
+const MobileLink = styled(Link)`
+    color: #D7B7E1;
+    text-decoration: none;
+
+    &:hover {
+    text-decoration: underline;
+    }
+`
+
+export {A, Blurb, BlurbDiv, P, Span, MobileLink}

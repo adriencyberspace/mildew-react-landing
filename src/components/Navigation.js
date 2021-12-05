@@ -124,10 +124,7 @@ const Navigation = () => {
   return (
     <Container>
       <BrowserRouter>
-      <NavBlob topLeft>
-        <NavLink id="green" to="/">Home</NavLink>
-      </NavBlob>
-
+      <NavBlob topLeft><NavLink id="green" to="/">Home</NavLink></NavBlob>
       <NavBlob topRight><NavLink id="pink" to="/about">About</NavLink></NavBlob>
       <NavBlob bottomLeft><NavLink bR id="teal" to="/contact">Contact</NavLink></NavBlob>
       <NavBlob bottomRight><NavLink bR id="blue" target="_blank" to={{ pathname: "https://www.instagram.com/mildewmag/"}}>Instagram</NavLink></NavBlob>
