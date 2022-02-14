@@ -18,7 +18,7 @@ const Home = () => {
                 <BlurbDiv>
                     <Blurb> The secondhand fashion magazine.</Blurb>
                 </BlurbDiv>
-                <P style={marginBottom20}> In print Spring 2022. </P>   
+                <P style={marginBottom20}> In print Summer 2022. </P>   
             </div>
             <P style={marginBottom20}> Stay in the loop:</P>
                 <Mailchimp />
