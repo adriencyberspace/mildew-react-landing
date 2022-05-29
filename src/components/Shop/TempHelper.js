@@ -1,9 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import { OpenCartContext } from "../../contexts/OpenCartContext";
+import React, { useState, useEffect, createContext } from "react";
 import { useQuery, useMutation } from "@apollo/react-hooks";
-import Product from "./Product";
-import Cart from "./Cart";
-import CustomerAuthWithMutation from "./CustomerAuth";
 import gql from "graphql-tag";
 import {
   useCheckoutEffect,
@@ -13,8 +9,6 @@ import {
   checkoutLineItemsRemove,
   checkoutCustomerAssociate,
 } from "../../queries/checkout";
-
-// TODO: All Cart props have to be Contexts so we can access Cart from About page (OR About page has no route?)
 
 const query = gql`
   query query {
@@ -73,8 +67,10 @@ const query = gql`
   }
 `;
 
-function Shop(props) {
-  const { isCartOpen, setCartOpen } = useContext(OpenCartContext);
+export const CartContext = createContext();
+
+export const CartProvider = ({ children }) => {
+  const [isCartOpen, setCartOpen] = useState(false);
 
   const [isNewCustomer, setNewCustomer] = useState(false);
   const [isCustomerAuthOpen, setCustomerAuthOpen] = useState(false);
@@ -101,6 +97,8 @@ function Shop(props) {
       error: lineItemAddError,
     },
   ] = useMutation(checkoutLineItemsAdd);
+
+  // const lineItemUpdateData =
 
   const [
     lineItemUpdateMutation,
@@ -218,44 +216,38 @@ function Shop(props) {
     });
   };
 
-  if (shopLoading) {
-    return <p>Loading ...</p>;
-  }
-
-  if (shopError) {
-    return <p>{shopError.message}</p>;
-  }
-
   return (
-    <div className="App">
-      <CustomerAuthWithMutation
-        closeCustomerAuth={closeCustomerAuth}
-        isCustomerAuthOpen={isCustomerAuthOpen}
-        newCustomer={isNewCustomer}
-        associateCustomerCheckout={associateCustomerCheckout}
-        showAccountVerificationMessage={accountVerificationMessage}
-      />
-
-      <div className="Product-wrapper">
-        {shopData.shop.products.edges.map((product) => (
-          <Product
-            addVariantToCart={addVariantToCart}
-            checkout={checkout}
-            key={product.node.id.toString()}
-            product={product.node}
-          />
-        ))}
-      </div>
-      <Cart
-        removeLineItemInCart={removeLineItemInCart}
-        updateLineItemInCart={updateLineItemInCart}
-        checkout={checkout}
-        isCartOpen={isCartOpen}
-        handleCartClose={handleCartClose}
-        customerAccessToken={customerAccessToken}
-      />
-    </div>
+    <CartContext.Provider
+      value={{
+        isCartOpen,
+        setCartOpen,
+        removeLineItemInCart,
+        lineItemRemoveData,
+        checkout,
+        setCheckout,
+        updateLineItemInCart,
+        lineItemUpdateMutation,
+        lineItemUpdateData,
+        createCheckoutMutation,
+        createCheckoutData,
+        shopLoading,
+        shopError,
+        closeCustomerAuth,
+        isCustomerAuthOpen,
+        isNewCustomer,
+        associateCustomerCheckout,
+        accountVerificationMessage,
+        shopData,
+        addVariantToCart,
+        checkout,
+        setCheckout,
+        removeLineItemInCart,
+        updateLineItemInCart,
+        handleCartClose,
+        customerAccessToken,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
   );
-}
-
-export default Shop;
+};

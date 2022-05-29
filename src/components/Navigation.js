@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 
-import { OpenCartContext } from "../contexts/OpenCartContext";
+import { CartContext } from "./Shop/TempHelper";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Home } from "./Home";
+import Cart from "./Shop/Cart";
 
 import nav1white from "../images/nav1white.png";
 import nav1color from "../images/nav1color.png";
@@ -137,7 +138,7 @@ const HiddenImg = styled.img`
 const Container = styled.div``;
 
 const Navigation = () => {
-  const { isCartOpen, setCartOpen } = useContext(OpenCartContext);
+  const { isCartOpen, setCartOpen } = useContext(CartContext);
   const clickHandler = () => {
     setCartOpen(!isCartOpen);
   };
@@ -192,6 +193,7 @@ const Navigation = () => {
         <HiddenImg src={nav3color}></HiddenImg>
         <HiddenImg src={nav4color}></HiddenImg>
       </Hidden>
+      <Cart />
     </Container>
   );
 };
