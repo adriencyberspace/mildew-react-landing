@@ -8,7 +8,7 @@ import {
   checkoutLineItemsUpdate,
   checkoutLineItemsRemove,
   checkoutCustomerAssociate,
-} from "../../queries/checkout";
+} from "../queries/checkout";
 
 const query = gql`
   query query {
@@ -239,10 +239,6 @@ export const CartProvider = ({ children }) => {
         accountVerificationMessage,
         shopData,
         addVariantToCart,
-        checkout,
-        setCheckout,
-        removeLineItemInCart,
-        updateLineItemInCart,
         handleCartClose,
         customerAccessToken,
       }}

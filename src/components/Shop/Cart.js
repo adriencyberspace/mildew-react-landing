@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { OpenCartContext } from "../../contexts/OpenCartContext";
-import { CartContext } from "./TempHelper";
+import { CartContext } from "../../contexts/CartContext";
 import LineItem from "./LineItem";
 
 function Cart() {

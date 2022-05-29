@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import styled, { css } from "styled-components";
 import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 
-import { CartContext } from "./Shop/TempHelper";
+import { CartContext } from "../contexts/CartContext";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Home } from "./Home";
@@ -142,8 +142,6 @@ const Navigation = () => {
   const clickHandler = () => {
     setCartOpen(!isCartOpen);
   };
-
-  console.log(isCartOpen);
 
   return (
     <Container>

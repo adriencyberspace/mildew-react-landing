@@ -1,7 +1,6 @@
 import React from "react";
 import Shop from "./Shop/Shop";
 import { Blurb, BlurbDiv, P } from "./Content";
-import TempShop from "./Shop/TempShop";
 
 const Home = () => {
   const marginBottom20 = {
@@ -16,9 +15,7 @@ const Home = () => {
         </BlurbDiv>
         <P style={marginBottom20}> In print Summer 2022. </P>
       </div>
-
-      {/* <Shop /> */}
-      <TempShop />
+      <Shop />
     </div>
   );
 };

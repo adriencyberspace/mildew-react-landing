@@ -1,6 +1,5 @@
 import React from "react";
-import { OpenCartProvider } from "./contexts/OpenCartContext";
-import { CartProvider } from "./components/Shop/TempHelper";
+import { CartProvider } from "./contexts/CartContext";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 
