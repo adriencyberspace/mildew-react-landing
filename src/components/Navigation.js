@@ -1,19 +1,18 @@
-import styled, { css } from 'styled-components'
-import { BrowserRouter, Link, Switch, Route, Redirect } from 'react-router-dom'
+import styled, { css } from "styled-components";
+import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 
-import { About } from './About'
-import { Contact } from './Contact'
-import { Home } from './Home'
+import { About } from "./About";
+import { Contact } from "./Contact";
+import { Home } from "./Home";
 
-import nav1white from '../images/nav1white.png'
-import nav1color from '../images/nav1color.png'
-import nav2white from '../images/nav2white.png'
-import nav2color from '../images/nav2color.png'
-import nav3white from '../images/nav3white.png'
-import nav3color from '../images/nav3color.png'
-import nav4white from '../images/nav4white.png'
-import nav4color from '../images/nav4color.png'
-
+import nav1white from "../images/nav1white.png";
+import nav1color from "../images/nav1color.png";
+import nav2white from "../images/nav2white.png";
+import nav2color from "../images/nav2color.png";
+import nav3white from "../images/nav3white.png";
+import nav3color from "../images/nav3color.png";
+import nav4white from "../images/nav4white.png";
+import nav4color from "../images/nav4color.png";
 
 const NavBlob = styled.div`
   background: transparent;
@@ -33,11 +32,10 @@ const NavBlob = styled.div`
     display: none;
   }
 
-
-  ${props =>
+  ${(props) =>
     props.topLeft &&
     css`
-    background-image: url(${nav1white});
+      background-image: url(${nav1white});
       top: 0;
       left: 0;
       &:hover {
@@ -46,7 +44,7 @@ const NavBlob = styled.div`
       }
     `};
 
-  ${props =>
+  ${(props) =>
     props.topRight &&
     css`
       background-image: url(${nav2white});
@@ -58,7 +56,7 @@ const NavBlob = styled.div`
       }
     `};
 
-  ${props =>
+  ${(props) =>
     props.bottomLeft &&
     css`
       background-image: url(${nav3white});
@@ -70,7 +68,7 @@ const NavBlob = styled.div`
       }
     `};
 
-  ${props =>
+  ${(props) =>
     props.bottomRight &&
     css`
       background-image: url(${nav4white});
@@ -83,7 +81,7 @@ const NavBlob = styled.div`
         transform: rotate(-15deg);
       }
     `};
-`
+`;
 
 const NavLink = styled(Link)`
   top: 50%;
@@ -96,43 +94,60 @@ const NavLink = styled(Link)`
     color: white;
   }
 
-  ${props =>
+  ${(props) =>
     props.bR &&
     css`
-    top: 57%;
-    `
-  }
-`
+      top: 57%;
+    `}
+`;
 
 const Hidden = styled.div`
   position: absolute;
   top: 0;
   right: -50;
   max-width: 1px;
-
-`
+`;
 
 const HiddenImg = styled.img`
   max-width: 100%;
-`
+`;
 
-const Container = styled.div`
-`
+const Container = styled.div``;
 
 const Navigation = () => {
-
   return (
     <Container>
       <BrowserRouter>
-      <NavBlob topLeft><NavLink id="green" to="/">Home</NavLink></NavBlob>
-      <NavBlob topRight><NavLink id="pink" to="/about">About</NavLink></NavBlob>
-      <NavBlob bottomLeft><NavLink bR id="teal" to="/contact">Contact</NavLink></NavBlob>
-      <NavBlob bottomRight><NavLink bR id="blue" target="_blank" to={{ pathname: "https://www.instagram.com/mildewmag/"}}>Instagram</NavLink></NavBlob>
+        <NavBlob topLeft>
+          <NavLink id="green" to="/">
+            Shop
+          </NavLink>
+        </NavBlob>
+        <NavBlob topRight>
+          <NavLink id="pink" to="/about">
+            About
+          </NavLink>
+        </NavBlob>
+        <NavBlob bottomLeft>
+          <NavLink bR id="teal" to="/contact">
+            Contact
+          </NavLink>
+        </NavBlob>
+        <NavBlob bottomRight>
+          <NavLink
+            bR
+            id="blue"
+            target="_blank"
+            to={{ pathname: "https://www.instagram.com/mildewmag/" }}
+          >
+            Instagram
+          </NavLink>
+        </NavBlob>
 
         <Switch>
-          <Route exact path='/' component={Home}></Route>
-          <Route exact path='/about' component={About}></Route>
-          <Route exact path='/contact' component={Contact}></Route>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/about" component={About}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
           <Route path="*">
             <Redirect to="/" />
           </Route>
@@ -145,7 +160,7 @@ const Navigation = () => {
         <HiddenImg src={nav4color}></HiddenImg>
       </Hidden>
     </Container>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

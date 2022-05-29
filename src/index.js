@@ -1,14 +1,33 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './App.css'
-import './fonts/Tw-Cen-MT.ttf'
-import './fonts/GoudyBookletter1911.ttf'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
+import "./fonts/Tw-Cen-MT.ttf";
+import "./fonts/GoudyBookletter1911.ttf";
+import App from "./App";
+import { ApolloClient } from "apollo-client";
+import { createHttpLink } from "apollo-link-http";
+import { setContext } from "apollo-link-context";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloProvider } from "react-apollo";
+
+const httpLink = createHttpLink({
+  uri: "https://graphql.myshopify.com/api/graphql",
+});
+
+const middlewareLink = setContext(() => ({
+  headers: {
+    "X-Shopify-Storefront-Access-Token": "dd4d4dc146542ba7763305d71d1b3d38",
+  },
+}));
+
+const client = new ApolloClient({
+  link: middlewareLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 ReactDOM.render(
-  <React.StrictMode>
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </ApolloProvider>,
+  document.getElementById("root")
 );
-
