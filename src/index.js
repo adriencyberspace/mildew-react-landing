@@ -20,14 +20,14 @@ const middlewareLink = setContext(() => ({
   },
 }));
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   link: middlewareLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <App client={client} />
   </ApolloProvider>,
   document.getElementById("root")
 );

@@ -1,5 +1,5 @@
-import gql from 'graphql-tag';
-import { useEffect } from 'react';
+import gql from "graphql-tag";
+import { useEffect } from "react";
 
 const CheckoutFragment = gql`
   fragment CheckoutFragment on Checkout {
@@ -8,7 +8,7 @@ const CheckoutFragment = gql`
     totalTax
     subtotalPrice
     totalPrice
-    lineItems (first: 250) {
+    lineItems(first: 250) {
       edges {
         node {
           id
@@ -29,7 +29,7 @@ const CheckoutFragment = gql`
 `;
 
 export const createCheckout = gql`
-  mutation checkoutCreate ($input: CheckoutCreateInput!){
+  mutation checkoutCreate($input: CheckoutCreateInput!) {
     checkoutCreate(input: $input) {
       userErrors {
         message
@@ -44,7 +44,10 @@ export const createCheckout = gql`
 `;
 
 export const checkoutLineItemsAdd = gql`
-  mutation checkoutLineItemsAdd ($checkoutId: ID!, $lineItems: [CheckoutLineItemInput!]!) {
+  mutation checkoutLineItemsAdd(
+    $checkoutId: ID!
+    $lineItems: [CheckoutLineItemInput!]!
+  ) {
     checkoutLineItemsAdd(checkoutId: $checkoutId, lineItems: $lineItems) {
       userErrors {
         message
@@ -59,7 +62,10 @@ export const checkoutLineItemsAdd = gql`
 `;
 
 export const checkoutLineItemsUpdate = gql`
-  mutation checkoutLineItemsUpdate ($checkoutId: ID!, $lineItems: [CheckoutLineItemUpdateInput!]!) {
+  mutation checkoutLineItemsUpdate(
+    $checkoutId: ID!
+    $lineItems: [CheckoutLineItemUpdateInput!]!
+  ) {
     checkoutLineItemsUpdate(checkoutId: $checkoutId, lineItems: $lineItems) {
       userErrors {
         message
@@ -74,8 +80,11 @@ export const checkoutLineItemsUpdate = gql`
 `;
 
 export const checkoutLineItemsRemove = gql`
-  mutation checkoutLineItemsRemove ($checkoutId: ID!, $lineItemIds: [ID!]!) {
-    checkoutLineItemsRemove(checkoutId: $checkoutId, lineItemIds: $lineItemIds) {
+  mutation checkoutLineItemsRemove($checkoutId: ID!, $lineItemIds: [ID!]!) {
+    checkoutLineItemsRemove(
+      checkoutId: $checkoutId
+      lineItemIds: $lineItemIds
+    ) {
       userErrors {
         message
         field
@@ -89,8 +98,14 @@ export const checkoutLineItemsRemove = gql`
 `;
 
 export const checkoutCustomerAssociate = gql`
-  mutation checkoutCustomerAssociate($checkoutId: ID!, $customerAccessToken: String!) {
-    checkoutCustomerAssociate(checkoutId: $checkoutId, customerAccessToken: $customerAccessToken) {
+  mutation checkoutCustomerAssociate(
+    $checkoutId: ID!
+    $customerAccessToken: String!
+  ) {
+    checkoutCustomerAssociate(
+      checkoutId: $checkoutId
+      customerAccessToken: $customerAccessToken
+    ) {
       userErrors {
         field
         message
@@ -105,8 +120,17 @@ export const checkoutCustomerAssociate = gql`
 
 export function useCheckoutEffect(data, key, setDataCallback) {
   useEffect(() => {
-    if(data && data[key] && data[key].checkout) {
+    if (data && data[key] && data[key].checkout) {
       setDataCallback(data[key].checkout);
     }
-  }, [data])
+  }, [data]);
 }
+
+export const fetchCheckout = gql`
+  query ($id: ID!) {
+    node(id: $id) {
+      ...CheckoutFragment
+    }
+  }
+  ${CheckoutFragment}
+`;

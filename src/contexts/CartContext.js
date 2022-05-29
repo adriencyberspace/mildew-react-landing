@@ -185,6 +185,7 @@ export const CartProvider = ({ children }) => {
       checkoutId: checkout.id,
       lineItems: [{ variantId, quantity: parseInt(quantity, 10) }],
     };
+    localStorage.setItem("shopify_checkout_id", variables.checkoutId);
     // TODO replace for each mutation in the checkout thingy. can we export them from there???
     // create your own custom hook???
 
@@ -241,6 +242,7 @@ export const CartProvider = ({ children }) => {
         addVariantToCart,
         handleCartClose,
         customerAccessToken,
+        query,
       }}
     >
       {children}

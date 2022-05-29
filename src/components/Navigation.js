@@ -136,11 +136,13 @@ const HiddenImg = styled.img`
 
 const Container = styled.div``;
 
-const Navigation = () => {
+const Navigation = (props) => {
   const { isCartOpen, setCartOpen, checkout } = useContext(CartContext);
   const clickHandler = () => {
     setCartOpen(!isCartOpen);
   };
+
+  const cartQty = checkout.lineItems.edges.length;
 
   return (
     <Container>
@@ -154,7 +156,7 @@ const Navigation = () => {
           {!isCartOpen && (
             <div>
               <CartButton id="pink" onClick={clickHandler}>
-                Cart ({checkout.lineItems.edges.length})
+                Cart {cartQty > 0 && `(${cartQty})`}
               </CartButton>
             </div>
           )}
