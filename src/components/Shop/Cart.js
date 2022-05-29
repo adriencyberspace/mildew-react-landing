@@ -11,6 +11,8 @@ function Cart() {
     handleCartClose,
   } = useContext(CartContext);
 
+  console.log(checkout.lineItems.edges.length);
+
   const openCheckout = () => {
     window.open(checkout.webUrl);
   };

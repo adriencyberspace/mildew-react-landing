@@ -5,7 +5,6 @@ import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 
 import { CartContext } from "../contexts/CartContext";
 import { About } from "./About";
-import { Contact } from "./Contact";
 import { Home } from "./Home";
 import Cart from "./Shop/Cart";
 
@@ -108,7 +107,7 @@ const NavLink = styled(Link)`
 const CartButton = styled.div`
   top: 50%;
   left: 50%;
-  padding: 50px 50px;
+  padding: 50px 10px;
   position: absolute;
   text-decoration: none;
   transform: translate(-50%, -50%);
@@ -138,7 +137,7 @@ const HiddenImg = styled.img`
 const Container = styled.div``;
 
 const Navigation = () => {
-  const { isCartOpen, setCartOpen } = useContext(CartContext);
+  const { isCartOpen, setCartOpen, checkout } = useContext(CartContext);
   const clickHandler = () => {
     setCartOpen(!isCartOpen);
   };
@@ -155,7 +154,7 @@ const Navigation = () => {
           {!isCartOpen && (
             <div>
               <CartButton id="pink" onClick={clickHandler}>
-                Cart
+                Cart ({checkout.lineItems.edges.length})
               </CartButton>
             </div>
           )}
@@ -179,7 +178,6 @@ const Navigation = () => {
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/about" component={About}></Route>
-          <Route exact path="/contact" component={Contact}></Route>
           <Route path="*">
             <Redirect to="/" />
           </Route>
