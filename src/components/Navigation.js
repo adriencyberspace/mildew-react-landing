@@ -1,6 +1,9 @@
+import React, { useContext } from "react";
+
 import styled, { css } from "styled-components";
 import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
 
+import { OpenCartContext } from "../contexts/OpenCartContext";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Home } from "./Home";
@@ -134,9 +137,12 @@ const HiddenImg = styled.img`
 const Container = styled.div``;
 
 const Navigation = () => {
-  const handleClick = () => {
-    console.log("clicked");
+  const { isCartOpen, setCartOpen } = useContext(OpenCartContext);
+  const clickHandler = () => {
+    setCartOpen(!isCartOpen);
   };
+
+  console.log(isCartOpen);
 
   return (
     <Container>
@@ -147,9 +153,13 @@ const Navigation = () => {
           </NavLink>
         </NavBlob>
         <NavBlob topRight>
-          <CartButton onClick={handleClick} id="pink">
-            Cart
-          </CartButton>
+          {!isCartOpen && (
+            <div>
+              <CartButton id="pink" onClick={clickHandler}>
+                Cart
+              </CartButton>
+            </div>
+          )}
         </NavBlob>
         <NavBlob bottomLeft>
           <NavLink bR id="teal" to="/about">

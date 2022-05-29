@@ -1,15 +1,15 @@
-import React  from 'react'
-
-import Header from './components/Header'
-import Navigation from './components/Navigation'
+import React from "react";
+import { OpenCartProvider } from "./contexts/OpenCartContext";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div>
+    <OpenCartProvider>
       <Header />
       <Navigation />
-    </div>
-  )
+    </OpenCartProvider>
+  );
 }
 
-export default App
+export default App;

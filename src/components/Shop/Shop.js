@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { OpenCartContext } from "../../contexts/OpenCartContext";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import Product from "./Product";
 import Cart from "./Cart";
@@ -71,7 +72,10 @@ const query = gql`
 `;
 
 function App(props) {
-  const [isCartOpen, setCartOpen] = useState(false);
+  // const [isCartOpen, setCartOpen] = useState(false);
+
+  const { isCartOpen, setCartOpen } = useContext(OpenCartContext);
+
   const [isNewCustomer, setNewCustomer] = useState(false);
   const [isCustomerAuthOpen, setCustomerAuthOpen] = useState(false);
   const [showAccountVerificationMessage, setAccountVerificationMessage] =
@@ -224,13 +228,6 @@ function App(props) {
 
   return (
     <div className="App">
-      {!isCartOpen && (
-        <div className="App__view-cart-wrapper">
-          <button className="App__view-cart" onClick={() => setCartOpen(true)}>
-            Cart
-          </button>
-        </div>
-      )}
       <CustomerAuthWithMutation
         closeCustomerAuth={closeCustomerAuth}
         isCustomerAuthOpen={isCustomerAuthOpen}
