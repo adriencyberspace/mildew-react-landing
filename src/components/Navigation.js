@@ -101,6 +101,25 @@ const NavLink = styled(Link)`
     `}
 `;
 
+const CartButton = styled.div`
+  top: 50%;
+  left: 50%;
+  padding: 50px 50px;
+  position: absolute;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
+
+  ${(props) =>
+    props.bR &&
+    css`
+      top: 57%;
+    `}
+`;
+
 const Hidden = styled.div`
   position: absolute;
   top: 0;
@@ -115,6 +134,10 @@ const HiddenImg = styled.img`
 const Container = styled.div``;
 
 const Navigation = () => {
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
   return (
     <Container>
       <BrowserRouter>
@@ -124,13 +147,13 @@ const Navigation = () => {
           </NavLink>
         </NavBlob>
         <NavBlob topRight>
-          <NavLink id="pink" to="/about">
-            About
-          </NavLink>
+          <CartButton onClick={handleClick} id="pink">
+            Cart
+          </CartButton>
         </NavBlob>
         <NavBlob bottomLeft>
-          <NavLink bR id="teal" to="/contact">
-            Contact
+          <NavLink bR id="teal" to="/about">
+            About
           </NavLink>
         </NavBlob>
         <NavBlob bottomRight>
