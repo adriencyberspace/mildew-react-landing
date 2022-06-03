@@ -1,15 +1,15 @@
-import React  from 'react'
-
-import Header from './components/Header'
-import Navigation from './components/Navigation'
+import React from "react";
+import { CartProvider } from "./contexts/CartContext";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div>
+    <CartProvider>
       <Header />
       <Navigation />
-    </div>
-  )
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;
