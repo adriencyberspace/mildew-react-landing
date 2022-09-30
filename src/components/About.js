@@ -7,6 +7,10 @@ const About = () => {
     marginTop: 20,
   };
 
+  const marginTop40 = {
+    marginTop: 40,
+  };
+
   const margin20 = {
     marginTop: 20,
     marginBottom: 20,
@@ -15,7 +19,7 @@ const About = () => {
   return (
     <div className="content-container">
       <div>
-        <P style={marginTop20}>
+        <P style={marginTop40}>
           Mildew is a print magazine about secondhand fashion and creative
           reuse, featuring art and writing that inspires us to think about old
           clothes in new ways. As the voice of the new-to-you ecosystem, Mildew

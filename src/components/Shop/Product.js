@@ -27,6 +27,8 @@ function Product(props) {
     return (image || primary).src;
   };
 
+  console.log(props.product);
+
   const handleOptionChange = (event) => {
     const target = event.target;
     selectedOptions[target.name] = target.value;
@@ -58,21 +60,23 @@ function Product(props) {
   });
 
   return (
-    <div className="Product">
-      <div className="Product__left">
-        {props.product.images.edges.length ? (
-          <img
-            className="Product__image"
-            src={variantImage.src}
-            alt={`${props.product.title} product shot`}
-          />
-        ) : null}
-      </div>
-      <div className="Product__right">
-        <h5 className="Product__title">{props.product.title}</h5>
-        <span className="Product__price">${variant.price}</span>
-        {/* {variantSelectors} */}
-        <label className="Product__option">
+    <div className="container">
+      <div className="Product">
+        <div className="Product__left">
+          {props.product.images.edges.length ? (
+            <img
+              className="Product__image"
+              src={variantImage.src}
+              alt={`${props.product.title} product shot`}
+            />
+          ) : null}
+        </div>
+        <div className="Product__right">
+          <h5 className="Product__title">{props.product.title}</h5>
+
+          <span className="Product__price">${variant.price}</span>
+          {/* {variantSelectors} */}
+          {/* <label className="Product__option">
           Quantity
           <input
             min="1"
@@ -80,14 +84,20 @@ function Product(props) {
             defaultValue={variantQuantity}
             onChange={handleQuantityChange}
           ></input>
-        </label>
-        <button
-          className="Product__buy button"
-          onClick={() => props.addVariantToCart(variant.id, variantQuantity)}
-        >
-          Add to Cart
-        </button>
+        </label> */}
+          <button
+            className="Product__buy button rotate"
+            onClick={() => props.addVariantToCart(variant.id, variantQuantity)}
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
+      <span className="Product">
+        <div
+          dangerouslySetInnerHTML={{ __html: props.product.descriptionHtml }}
+        ></div>
+      </span>
     </div>
   );
 }

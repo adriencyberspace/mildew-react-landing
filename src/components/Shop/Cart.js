@@ -29,7 +29,7 @@ function Cart() {
   return (
     <div className={`Cart ${isCartOpen ? "Cart--open" : ""}`}>
       <header className="Cart__header">
-        <h2>Your cart</h2>
+        <h2 className="Cart__title">Your cart</h2>
         <button onClick={handleCartClose} className="Cart__close">
           ×
         </button>
