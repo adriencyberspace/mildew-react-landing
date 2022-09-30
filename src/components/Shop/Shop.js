@@ -46,7 +46,7 @@ function Shop() {
         try {
           // create a checkout with the existing checkout id
           const checkout = await fetchExistingCheckout(existingCheckoutID);
-
+          console.log("checkout", checkout.completedAt);
           // Make sure this cart hasn’t already been purchased.
           if (!checkout.completedAt) {
             setCheckoutInState(checkout);

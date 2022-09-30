@@ -53,20 +53,6 @@ const About = () => {
             <MobileLink to="/about">About Mildew</MobileLink>
           </P>
         </Span>
-        <P style={marginTop20}>
-          <A
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/mildewmag"
-          >
-            @mildewmag
-          </A>
-        </P>
-        <P style={marginTop20}>
-          <A rel="noreferrer" target="_blank" href="mailto:mildewmag@gmail.com">
-            mildewmag@gmail.com
-          </A>
-        </P>
         <Span>
           <P style={marginTop20}>
             <MobileLink to="/">Home</MobileLink>

@@ -118,6 +118,14 @@ code {
   .inputField__field {
     font-size: 16px;
   }
+
+  .container {
+    padding-bottom: 20px !important;
+  }
+}
+
+.spacer {
+  width: 10px;
 }
 
 /* SHOP */
@@ -189,7 +197,7 @@ img {
 
 .Product-wrapper {
   max-width: 900px;
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   /* display: flex; */
   flex-wrap: wrap;
   justify-content: center;
@@ -423,7 +431,8 @@ img {
   float: right;
   font-weight: bold;
   font-size: 15px;
-  margin-right: 40px;
+  margin-right: 60px;
+  width: 50px;
   color: #26312f;
 }
 
