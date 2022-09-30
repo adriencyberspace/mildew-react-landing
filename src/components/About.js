@@ -1,15 +1,25 @@
 import React from "react";
-import { P, Span, MobileLink } from "./Content";
+import { A, P, Span, MobileLink } from "./Content";
+import Mailchimp from "./Mailchimp";
 
 const About = () => {
   const marginTop20 = {
     marginTop: 20,
   };
 
+  const marginTop40 = {
+    marginTop: 40,
+  };
+
+  const margin20 = {
+    marginTop: 20,
+    marginBottom: 20,
+  };
+
   return (
     <div className="content-container">
       <div>
-        <P style={marginTop20}>
+        <P style={marginTop40}>
           Mildew is a print magazine about secondhand fashion and creative
           reuse, featuring art and writing that inspires us to think about old
           clothes in new ways. As the voice of the new-to-you ecosystem, Mildew
@@ -17,7 +27,32 @@ const About = () => {
           decay of fashion as we knew it.
         </P>
         <P style={marginTop20}>Not new, but original.</P>
-        <P style={marginTop20}>In print October 2022.</P>
+        <P style={marginTop20}>In print Summer 2022.</P>
+        <P style={margin20}> Stay in the loop:</P>
+        <Mailchimp />
+        <Span>
+          <P style={marginTop20}>
+            <A
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/mildewmag"
+            >
+              @mildewmag
+            </A>
+          </P>
+          <P style={marginTop20}>
+            <A
+              rel="noreferrer"
+              target="_blank"
+              href="mailto:mildewmag@gmail.com"
+            >
+              mildewmag@gmail.com
+            </A>
+          </P>
+          <P style={marginTop20}>
+            <MobileLink to="/about">About Mildew</MobileLink>
+          </P>
+        </Span>
         <Span>
           <P style={marginTop20}>
             <MobileLink to="/">Home</MobileLink>

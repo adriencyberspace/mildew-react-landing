@@ -1,15 +1,20 @@
 import React from "react";
-
-import Mailchimp from "./Mailchimp";
-import { A, Blurb, BlurbDiv, P, Span, MobileLink } from "./Content";
+import Shop from "./Shop/Shop";
+import { Blurb, BlurbDiv, P, A, Span, MobileLink } from "./Content";
 
 const Home = () => {
+  const marginBottom20 = {
+    marginBottom: 20,
+  };
+
   const marginTop20 = {
     marginTop: 20,
   };
 
-  const marginBottom20 = {
-    marginBottom: 20,
+  const margin20 = {
+    marginTop: 20,
+    marginBottom: 40,
+    paddingBottom: 40,
   };
 
   return (
@@ -20,8 +25,7 @@ const Home = () => {
         </BlurbDiv>
         <P style={marginBottom20}> In print October 2022. </P>
       </div>
-      <P style={marginBottom20}> Stay in the loop:</P>
-      <Mailchimp />
+      <Shop />
       <Span>
         <P style={marginTop20}>
           <A
@@ -37,10 +41,15 @@ const Home = () => {
             mildewmag@gmail.com
           </A>
         </P>
-        <P style={marginTop20}>
+        <P style={margin20}>
           <MobileLink to="/about">About Mildew</MobileLink>
         </P>
       </Span>
+      {/* <Span>
+        <P style={margin20}>
+          <MobileLink to="/">Home</MobileLink>
+        </P>
+      </Span> */}
     </div>
   );
 };
