@@ -27,7 +27,7 @@ const About = () => {
           decay of fashion as we knew it.
         </P>
         <P style={marginTop20}>Not new, but original.</P>
-        <P style={marginTop20}>In print Summer 2022.</P>
+        <P style={marginTop20}>In print October 2022.</P>
         <P style={margin20}> Stay in the loop:</P>
         <Mailchimp />
         <Span>
