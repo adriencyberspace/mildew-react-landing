@@ -48,6 +48,11 @@ function ScrollImage(props) {
             moveUp();
           }}
           onMouseUp={() => setMove(false)}
+          onTouchStart={() => {
+            setMove(true);
+            moveDown();
+          }}
+          onTouchEnd={() => setMove(false)}
         >
           {"  "}
           UP{"  "}
@@ -60,6 +65,11 @@ function ScrollImage(props) {
             moveDown();
           }}
           onMouseUp={() => setMove(false)}
+          onTouchStart={() => {
+            setMove(true);
+            moveDown();
+          }}
+          onTouchEnd={() => setMove(false)}
         >
           DOWN
         </button>

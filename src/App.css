@@ -541,6 +541,13 @@ img {
   margin-right: 20px;
   margin-bottom: 30px;
 }
+
+.Product__scroll {
+  height: 497px;
+
+  overflow-y: scroll;
+}
+
 @media only screen and (max-width: 700px) {
   .Product {
     display: block;
@@ -548,12 +555,10 @@ img {
   .Product__left {
     width: 100%;
   }
-}
-
-.Product__scroll {
-  height: 497px;
-
-  overflow-y: scroll;
+  .Product__scroll {
+    height: 379px;
+    max-height: 379px;
+  }
 }
 
 .Scroll-buttons {
