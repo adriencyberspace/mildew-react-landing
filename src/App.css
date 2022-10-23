@@ -60,6 +60,33 @@ code {
   background-color: black;
 }
 
+#bg-green {
+  background-color: #b0b04c;
+}
+
+#bg-pink {
+  background-color: #e89b9a;
+  color: white;
+}
+
+#bg-teal:hover {
+  background: white;
+  color: #319686;
+}
+
+#bg-teal {
+  background-color: #319686;
+  color: white;
+}
+
+#bg-blue {
+  background-color: #6eb0cc;
+}
+
+#bg-red {
+  background-color: #c85d4a;
+}
+
 #green {
   color: #b0b04c;
 }
@@ -512,6 +539,7 @@ img {
 .Product__left {
   width: 66%;
   margin-right: 20px;
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 700px) {
   .Product {
@@ -522,8 +550,24 @@ img {
   }
 }
 
+.Product__scroll {
+  height: 497px;
+
+  overflow-y: scroll;
+}
+
+.Scroll-buttons {
+  display: flex;
+  margin: 20px auto 0;
+  justify-content: center;
+}
+
+.button__up {
+  margin-right: 10px;
+}
+
 .Product__image {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .Product__title {
   font-size: 30px;

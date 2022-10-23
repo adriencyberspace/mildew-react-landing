@@ -70,10 +70,6 @@ function Shop() {
     // eslint-disable-next-line
   }, []);
 
-  if (shopLoading) {
-    return <p>Loading ...</p>;
-  }
-
   if (shopError) {
     return <p>{shopError.message}</p>;
   }
@@ -89,14 +85,20 @@ function Shop() {
       />
 
       <div className="Product-wrapper">
-        {shopData.shop.products.edges.map((product) => (
-          <Product
-            addVariantToCart={addVariantToCart}
-            checkout={checkout}
-            key={product.node.id.toString()}
-            product={product.node}
-          />
-        ))}
+        {shopLoading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            {shopData.shop.products.edges.map((product) => (
+              <Product
+                addVariantToCart={addVariantToCart}
+                checkout={checkout}
+                key={product.node.id.toString()}
+                product={product.node}
+              />
+            ))}
+          </>
+        )}
       </div>
       {/* <Cart /> */}
     </div>

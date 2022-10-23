@@ -23,7 +23,6 @@ const Home = () => {
         <BlurbDiv>
           <Blurb> The secondhand fashion magazine.</Blurb>
         </BlurbDiv>
-        <P style={marginBottom20}> In print October 2022. </P>
       </div>
       <Shop />
       <Span>
