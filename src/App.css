@@ -251,6 +251,7 @@ img {
   padding: 12px 20px;
   cursor: pointer;
   border-radius: 25px;
+  user-select: none;
 }
 
 .button:hover,
