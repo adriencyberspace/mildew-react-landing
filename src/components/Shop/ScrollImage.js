@@ -50,7 +50,7 @@ function ScrollImage(props) {
           onMouseUp={() => setMove(false)}
           onTouchStart={() => {
             setMove(true);
-            moveDown();
+            moveUp();
           }}
           onTouchEnd={() => setMove(false)}
         >
