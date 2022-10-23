@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4564127a.chunk.css",
-    "main.js": "/static/js/main.fcd3dbab.chunk.js",
-    "main.js.map": "/static/js/main.fcd3dbab.chunk.js.map",
+    "main.css": "/static/css/main.34ab2fe6.chunk.css",
+    "main.js": "/static/js/main.0010c11b.chunk.js",
+    "main.js.map": "/static/js/main.0010c11b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f47243dd.js",
     "runtime-main.js.map": "/static/js/runtime-main.f47243dd.js.map",
     "static/js/2.145afec6.chunk.js": "/static/js/2.145afec6.chunk.js",
     "static/js/2.145afec6.chunk.js.map": "/static/js/2.145afec6.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4564127a.chunk.css.map": "/static/css/main.4564127a.chunk.css.map",
+    "static/css/main.34ab2fe6.chunk.css.map": "/static/css/main.34ab2fe6.chunk.css.map",
     "static/js/2.145afec6.chunk.js.LICENSE.txt": "/static/js/2.145afec6.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/Tw-Cen-MT.7b67eec0.ttf",
     "static/media/mildew.a49efbbf.png": "/static/media/mildew.a49efbbf.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.f47243dd.js",
     "static/js/2.145afec6.chunk.js",
-    "static/css/main.4564127a.chunk.css",
-    "static/js/main.fcd3dbab.chunk.js"
+    "static/css/main.34ab2fe6.chunk.css",
+    "static/js/main.0010c11b.chunk.js"
   ]
 }
