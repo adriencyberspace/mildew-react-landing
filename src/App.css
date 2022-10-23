@@ -181,7 +181,7 @@ code {
 img {
   display: block;
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
 }
 
 /*
@@ -545,7 +545,6 @@ img {
 
 .Product__scroll {
   height: 497px;
-
   overflow-y: auto;
 }
 
@@ -557,8 +556,25 @@ img {
     width: 100%;
   }
   .Product__scroll {
-    height: 379px;
-    max-height: 379px;
+    height: 600px;
+    max-height: 600px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .Product__scroll {
+    height: 460px;
+    max-height: 460px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Product__scroll {
+    height: 400px;
+    max-height: 400px;
+    width: 100%;
   }
 }
 
@@ -574,6 +590,7 @@ img {
 
 .Product__image {
   /* margin-bottom: 30px; */
+  width: 100%;
 }
 .Product__title {
   font-size: 30px;
