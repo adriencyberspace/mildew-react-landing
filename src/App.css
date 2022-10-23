@@ -546,7 +546,7 @@ img {
 .Product__scroll {
   height: 497px;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 700px) {

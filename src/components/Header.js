@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import logo from '../images/mildew.png'
+import styled from "styled-components";
+import logo from "../images/mildew.png";
 
 const Logo = styled.img`
   margin: 150px 30% 10px;
@@ -11,12 +11,12 @@ const Logo = styled.img`
   }
 
   @media only screen and (max-width: 680px) {
-    margin: 120px 15% 0;
+    margin: 40px 15% 0;
     width: 70%;
   }
 
   @media only screen and (max-width: 420px) {
-    margin: 100px 10% 0;
+    margin: 40px 10% 0;
     width: 80%;
   }
 `;
@@ -26,7 +26,7 @@ const Header = () => {
     <div>
       <Logo src={logo} />
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
