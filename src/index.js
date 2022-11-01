@@ -9,6 +9,7 @@ import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { ApolloProvider } from "react-apollo";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const httpLink = createHttpLink({
   uri: "https://mildew-magazine.myshopify.com/api/graphql",
@@ -26,8 +27,10 @@ export const client = new ApolloClient({
 });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App client={client} />
-  </ApolloProvider>,
+  <Router>
+    <ApolloProvider client={client}>
+      <App client={client} />
+    </ApolloProvider>
+  </Router>,
   document.getElementById("root")
 );

@@ -146,45 +146,43 @@ const Navigation = (props) => {
 
   return (
     <Container>
-      <BrowserRouter>
-        <NavBlob topLeft>
-          <NavLink id="green" to="/">
-            Shop
-          </NavLink>
-        </NavBlob>
-        <NavBlob topRight>
-          {!isCartOpen && (
-            <div>
-              <CartButton id="pink" onClick={clickHandler}>
-                Cart {cartQty > 0 && `(${cartQty})`}
-              </CartButton>
-            </div>
-          )}
-        </NavBlob>
-        <NavBlob bottomLeft>
-          <NavLink bR id="teal" to="/about">
-            About
-          </NavLink>
-        </NavBlob>
-        <NavBlob bottomRight>
-          <NavLink
-            bR
-            id="blue"
-            target="_blank"
-            to={{ pathname: "https://www.instagram.com/mildewmag/" }}
-          >
-            Instagram
-          </NavLink>
-        </NavBlob>
+      <NavBlob topLeft>
+        <NavLink id="green" to="/">
+          Shop
+        </NavLink>
+      </NavBlob>
+      <NavBlob topRight>
+        {!isCartOpen && (
+          <div>
+            <CartButton id="pink" onClick={clickHandler}>
+              Cart {cartQty > 0 && `(${cartQty})`}
+            </CartButton>
+          </div>
+        )}
+      </NavBlob>
+      <NavBlob bottomLeft>
+        <NavLink bR id="teal" to="/about">
+          About
+        </NavLink>
+      </NavBlob>
+      <NavBlob bottomRight>
+        <NavLink
+          bR
+          id="blue"
+          target="_blank"
+          to={{ pathname: "https://www.instagram.com/mildewmag/" }}
+        >
+          Instagram
+        </NavLink>
+      </NavBlob>
 
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/about" component={About}></Route>
-          <Route path="*">
-            <Redirect to="/" />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/about" component={About}></Route>
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
       <Hidden>
         <HiddenImg src={nav1color}></HiddenImg>
         <HiddenImg src={nav2color}></HiddenImg>
