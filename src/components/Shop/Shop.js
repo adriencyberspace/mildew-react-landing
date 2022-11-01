@@ -33,10 +33,11 @@ function Shop() {
 
   // Fetch existing checkout or create new one:
   useEffect(() => {
+    console.log("render");
     const initializeCheckout = async () => {
-      const existingCheckoutID = sessionStorage.getItem("shopify_checkout_id");
+      const existingCheckoutID = localStorage.getItem("shopify_checkout_id");
       const setCheckoutInState = (checkout) => {
-        sessionStorage.setItem("shopify_checkout_id", checkout.id);
+        localStorage.setItem("shopify_checkout_id", checkout.id);
         setCheckout(checkout);
       };
 
@@ -51,7 +52,7 @@ function Shop() {
             return;
           }
         } catch (e) {
-          sessionStorage.setItem("shopify_checkout_id", null);
+          localStorage.setItem("shopify_checkout_id", null);
         }
       }
 
@@ -68,7 +69,7 @@ function Shop() {
     };
     initializeCheckout();
     // eslint-disable-next-line
-  }, []);
+  }, [checkout]);
 
   if (shopError) {
     return <p>{shopError.message}</p>;
