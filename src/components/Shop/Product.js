@@ -10,7 +10,6 @@ function Product(props) {
 
   const secondaryImages = [...props.product.images.edges];
   secondaryImages.shift();
-  console.log(secondaryImages);
 
   const [variantImage, setVariantImage] = useState(
     props.product.images.edges[0].node

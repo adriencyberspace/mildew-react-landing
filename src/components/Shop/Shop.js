@@ -34,10 +34,9 @@ function Shop() {
   // Fetch existing checkout or create new one:
   useEffect(() => {
     const initializeCheckout = async () => {
-      const existingCheckoutID = localStorage.getItem("shopify_checkout_id");
-
+      const existingCheckoutID = sessionStorage.getItem("shopify_checkout_id");
       const setCheckoutInState = (checkout) => {
-        localStorage.setItem("shopify_checkout_id", checkout.id);
+        sessionStorage.setItem("shopify_checkout_id", checkout.id);
         setCheckout(checkout);
       };
 
@@ -46,21 +45,22 @@ function Shop() {
         try {
           // create a checkout with the existing checkout id
           const checkout = await fetchExistingCheckout(existingCheckoutID);
-          console.log("checkout", checkout.completedAt);
           // Make sure this cart hasn’t already been purchased.
           if (!checkout.completedAt) {
             setCheckoutInState(checkout);
             return;
           }
         } catch (e) {
-          localStorage.setItem("shopify_checkout_id", null);
+          sessionStorage.setItem("shopify_checkout_id", null);
         }
       }
 
       // If a checkout id does NOT exist, create a new empty checkout
       const variables = { input: {} };
       createCheckoutMutation({ variables }).then(
-        (res) => {},
+        (res) => {
+          console.log(res);
+        },
         (err) => {
           console.log("create checkout error", err);
         }

@@ -11,8 +11,6 @@ function LineItemm(props) {
     props.updateLineItemInCart(lineItemId, updatedQuantity);
   };
 
-  console.log(props.line_item);
-
   return (
     <li className="Line-item">
       <div className="Line-item__img">
