@@ -7,12 +7,15 @@ const CheckoutFragment = gql`
     webUrl
     totalTaxV2 {
       amount
+      currencyCode
     }
     subtotalPriceV2 {
       amount
+      currencyCode
     }
     totalPriceV2 {
       amount
+      currencyCode
     }
     lineItems(first: 250) {
       edges {
@@ -25,7 +28,10 @@ const CheckoutFragment = gql`
             image {
               src
             }
-            price
+            priceV2 {
+              amount
+              currencyCode
+            }
           }
           quantity
         }

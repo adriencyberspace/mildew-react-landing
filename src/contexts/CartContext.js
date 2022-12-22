@@ -53,9 +53,11 @@ const query = gql`
                       }
                       price {
                         amount
+                        currencyCode
                       }
                       compareAtPrice {
                         amount
+                        currencyCode
                       }
                       availableForSale
                     }

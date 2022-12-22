@@ -48,11 +48,11 @@ function LineItemm(props) {
           </div>
           <span className="Line-item__price">
             <span className="spacer"></span>${" "}
-            {parseInt(
+            {parseFloat(
               (
-                props.line_item.quantity * props.line_item.variant.price.amount
-              ).toFixed(2),
-              10
+                props.line_item.quantity *
+                props.line_item.variant.priceV2.amount
+              ).toFixed(2)
             )}
           </span>
           <button
