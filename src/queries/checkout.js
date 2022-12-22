@@ -5,9 +5,15 @@ const CheckoutFragment = gql`
   fragment CheckoutFragment on Checkout {
     id
     webUrl
-    totalTax
-    subtotalPrice
-    totalPrice
+    totalTaxV2 {
+      amount
+    }
+    subtotalPriceV2 {
+      amount
+    }
+    totalPriceV2 {
+      amount
+    }
     lineItems(first: 250) {
       edges {
         node {

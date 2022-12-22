@@ -11,6 +11,8 @@ function Cart() {
     handleCartClose,
   } = useContext(CartContext);
 
+  console.log(checkout);
+
   const openCheckout = () => {
     window.open(checkout.webUrl);
   };
@@ -35,29 +37,29 @@ function Cart() {
         </button>
       </header>
       <ul className="Cart__line-items">{line_items}</ul>
-      <footer className="Cart__footer">
+      {/* <footer className="Cart__footer">
         <div className="Cart-info clearfix">
           <div className="Cart-info__total Cart-info__small">Subtotal</div>
           <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.subtotalPrice}</span>
+            <span className="pricing">$ {checkout.subtotalPriceV2.amount}</span>
           </div>
         </div>
         <div className="Cart-info clearfix">
           <div className="Cart-info__total Cart-info__small">Taxes</div>
           <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.totalTax}</span>
+            <span className="pricing">$ {checkout.totalTaxV2}</span>
           </div>
         </div>
         <div className="Cart-info clearfix">
           <div className="Cart-info__total Cart-info__small">Total</div>
           <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.totalPrice}</span>
+            <span className="pricing">$ {checkout.totalPriceV2.amount}</span>
           </div>
         </div>
         <button className="Cart__checkout button" onClick={openCheckout}>
           Checkout
         </button>
-      </footer>
+      </footer> */}
     </div>
   );
 }

@@ -50,7 +50,7 @@ function LineItemm(props) {
             <span className="spacer"></span>${" "}
             {parseInt(
               (
-                props.line_item.quantity * props.line_item.variant.price
+                props.line_item.quantity * props.line_item.variant.price.amount
               ).toFixed(2),
               10
             )}

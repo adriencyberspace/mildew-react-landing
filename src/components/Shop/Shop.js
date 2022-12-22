@@ -30,7 +30,7 @@ function Shop() {
     });
     return res.data.node;
   };
-
+  console.log("shopData", shopData);
   // Fetch existing checkout or create new one:
   useEffect(() => {
     console.log("render");
@@ -90,14 +90,16 @@ function Shop() {
           <p>Loading...</p>
         ) : (
           <>
-            {shopData.shop.products.edges.map((product) => (
-              <Product
-                addVariantToCart={addVariantToCart}
-                checkout={checkout}
-                key={product.node.id.toString()}
-                product={product.node}
-              />
-            ))}
+            {shopData.collections.edges[0].node.products.edges.map(
+              (product) => (
+                <Product
+                  addVariantToCart={addVariantToCart}
+                  checkout={checkout}
+                  key={product.node.id.toString()}
+                  product={product.node}
+                />
+              )
+            )}
           </>
         )}
       </div>
