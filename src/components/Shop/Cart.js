@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import LineItem from "./LineItem";
+import { formatPrice } from "../../helpers/formatters";
 
 function Cart() {
   const {
@@ -10,6 +11,12 @@ function Cart() {
     updateLineItemInCart,
     handleCartClose,
   } = useContext(CartContext);
+
+  const [subtotal, setSubtotal] = useState();
+
+  useEffect(() => {
+    checkout && setSubtotal(checkout?.subtotalPriceV2?.amount);
+  }, [checkout]);
 
   const openCheckout = () => {
     window.open(checkout.webUrl);
@@ -39,19 +46,7 @@ function Cart() {
         <div className="Cart-info clearfix">
           <div className="Cart-info__total Cart-info__small">Subtotal</div>
           <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.subtotalPrice}</span>
-          </div>
-        </div>
-        <div className="Cart-info clearfix">
-          <div className="Cart-info__total Cart-info__small">Taxes</div>
-          <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.totalTax}</span>
-          </div>
-        </div>
-        <div className="Cart-info clearfix">
-          <div className="Cart-info__total Cart-info__small">Total</div>
-          <div className="Cart-info__pricing">
-            <span className="pricing">$ {checkout.totalPrice}</span>
+            <span className="pricing">{formatPrice(subtotal)}</span>
           </div>
         </div>
         <button className="Cart__checkout button" onClick={openCheckout}>

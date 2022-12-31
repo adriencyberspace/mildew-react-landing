@@ -12,7 +12,7 @@ import { ApolloProvider } from "react-apollo";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const httpLink = createHttpLink({
-  uri: "https://mildew-magazine.myshopify.com/api/graphql",
+  uri: "https://mildew-magazine.myshopify.com/api/2022-10/graphql.json",
 });
 
 const middlewareLink = setContext(() => ({

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { formatPrice } from "../../helpers/formatters";
 import ScrollImage from "./ScrollImage";
 
 function Product(props) {
@@ -81,7 +82,9 @@ function Product(props) {
         <div className="Product__right">
           <h5 className="Product__title">{props.product.title}</h5>
 
-          <span className="Product__price">${variant.price}</span>
+          <span className="Product__price">
+            {formatPrice(variant.price.amount)}
+          </span>
           {/* {variantSelectors} */}
           {/* <label className="Product__option">
           Quantity

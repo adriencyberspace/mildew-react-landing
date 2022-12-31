@@ -51,8 +51,14 @@ const query = gql`
                       image {
                         src
                       }
-                      price
-                      compareAtPrice
+                      price {
+                        amount
+                        currencyCode
+                      }
+                      compareAtPrice {
+                        amount
+                        currencyCode
+                      }
                       availableForSale
                     }
                   }
@@ -67,62 +73,6 @@ const query = gql`
                       src
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    shop {
-      name
-      description
-      products(first: 250) {
-        pageInfo {
-          hasNextPage
-          hasPreviousPage
-        }
-        edges {
-          node {
-            id
-            title
-            descriptionHtml
-            options {
-              id
-              name
-              values
-            }
-            variants(first: 250) {
-              pageInfo {
-                hasNextPage
-                hasPreviousPage
-              }
-              edges {
-                node {
-                  id
-                  title
-
-                  selectedOptions {
-                    name
-                    value
-                  }
-                  image {
-                    src
-                  }
-                  price
-                  compareAtPrice
-                  availableForSale
-                }
-              }
-            }
-            images(first: 250) {
-              pageInfo {
-                hasNextPage
-                hasPreviousPage
-              }
-              edges {
-                node {
-                  src
                 }
               }
             }
