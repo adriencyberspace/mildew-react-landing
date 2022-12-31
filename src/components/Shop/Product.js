@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ScrollImage from "./ScrollImage";
 import { formatPrice } from "../../helpers/formatters";
+import ScrollImage from "./ScrollImage";
 
 function Product(props) {
   let defaultOptionValues = {};
